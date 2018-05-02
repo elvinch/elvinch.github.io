@@ -22,8 +22,6 @@
     <meta http-equiv="x-dns-prefetch-control" content="on">
 
 
-    <link rel="dns-prefetch" href="https://cdn1.lncld.net"/>
-
 
 
 
@@ -486,28 +484,34 @@
                 <!-- Post Comments -->
                 
                     
-    <div id="comment" style='padding:40px;' class="vcomment"></div>
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-<script>
-    var GUEST_INFO = ['nick','mail'];
-    var guest_info = 'nick,mail,link'.split(',').filter(function(item){
-        return GUEST_INFO.indexOf(item) > -1
-    });
-    var notify = 'false' == true;
-    var verify = 'false' == true;
-    new Valine({
-        el: '.vcomment',
-        notify: notify,
-        verify: verify,
-        appId: "ITMiBLBHBK2Iduy2eko1KuBL-gzGzoHsz",
-        appKey: "FlAM9AvGLoWRpI7xvNu5h39g",
-        placeholder: "欢迎在此提出你的见解",
-        pageSize:'6',
-        avatar:'hide',
-        lang:'zh-cn'
-    });
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://elvinch.github.io/2018/04/26/startmyblog/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://elvinch.github.io/2018/04/26/startmyblog/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
 </script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//xi-shan-ye-yu.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
 
                 
             </div>
@@ -819,7 +823,8 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 
-   
+   <!-- 使用 DISQUS js 代码 -->
+<script id="dsq-count-scr" src="//xi-shan-ye-yu.disqus.com/count.js" async></script>
 
 
 
